@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import android.os.Handler;
+import android.os.Looper;
 
 /**
  * The gateway of all events running in the game from ui to engine components
@@ -22,7 +23,7 @@ public class EventBus {
 	private Object obj = new Object();
 
 	private EventBus() {
-		mHandler = new Handler();
+		mHandler = new Handler(Looper.getMainLooper());
 	}
 
 	public static EventBus getInstance() {

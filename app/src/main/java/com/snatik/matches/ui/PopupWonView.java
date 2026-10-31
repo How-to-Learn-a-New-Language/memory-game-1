@@ -4,6 +4,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.os.Handler;
+import android.os.Looper;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,7 +51,7 @@ public class PopupWonView extends RelativeLayout {
 		mNextButton = (ImageView) findViewById(R.id.button_next);
 		FontLoader.setTypeface(context, new TextView[] { mTime, mScore }, Font.GROBOLD);
 		setBackgroundResource(R.drawable.level_complete);
-		mHandler = new Handler();
+		mHandler = new Handler(Looper.getMainLooper());
 		
 		mBackButton.setOnClickListener(new View.OnClickListener() {
 			@Override

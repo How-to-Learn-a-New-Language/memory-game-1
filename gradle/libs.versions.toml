@@ -1,0 +1,19 @@
+[versions]
+# Android Gradle Plugin 8.13 is the newest version that Android Studio Otter (2025.2.1) can open.
+# Newer Android Studio releases open it too and will offer to upgrade it (AGP 9.x needs a newer Android Studio).
+agp = "8.13.2"
+activity = "1.13.0"
+appcompat = "1.8.0"
+core = "1.18.0"
+fragment = "1.9.1"
+junit = "4.13.2"
+
+[libraries]
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-core = { group = "androidx.core", name = "core", version.ref = "core" }
+androidx-fragment = { group = "androidx.fragment", name = "fragment", version.ref = "fragment" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }

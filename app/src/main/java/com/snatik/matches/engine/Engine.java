@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.AsyncTask;
 import android.os.Handler;
+import android.os.Looper;
 import android.widget.ImageView;
 
 import com.snatik.matches.R;
@@ -52,7 +53,7 @@ public class Engine extends EventObserverAdapter {
 
 	private Engine() {
 		mScreenController = ScreenController.getInstance();
-		mHandler = new Handler();
+		mHandler = new Handler(Looper.getMainLooper());
 	}
 
 	public static Engine getInstance() {
